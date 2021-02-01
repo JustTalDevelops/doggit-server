@@ -5,7 +5,7 @@ import (
 	"sort"
 )
 
-func GetOrderedHandlers(libraries []*doggit.Library) []doggit.NopHandler {
+func GetOrderedHandlers(libraries []*doggit.Library) []doggit.Handler {
 	var sortedHandlers PriorityHandlerList
 
 	for _, l := range libraries {
@@ -19,7 +19,7 @@ func GetOrderedHandlers(libraries []*doggit.Library) []doggit.NopHandler {
 	return sortedHandlers
 }
 
-type PriorityHandlerList []doggit.NopHandler
+type PriorityHandlerList []doggit.Handler
 
 func (p PriorityHandlerList) Len() int           { return len(p) }
 func (p PriorityHandlerList) Less(i, j int) bool { return p[i].Priority() < p[j].Priority() }

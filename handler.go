@@ -15,11 +15,11 @@ import (
 )
 
 type PlayerHandler struct {
-	handlers []doggit.NopHandler
+	handlers []doggit.Handler
 	player   *player.Player
 }
 
-func StartHandling(player *player.Player, handlers []doggit.NopHandler) *PlayerHandler {
+func StartHandling(player *player.Player, handlers []doggit.Handler) *PlayerHandler {
 	for _, h := range handlers {
 		h.HandleJoin(player)
 	}
