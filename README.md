@@ -1,2 +1,2 @@
-# doggit-builder
-A builder for Doggit libraries
+# doggit-server
+A basic server that runs Doggit.
