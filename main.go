@@ -34,7 +34,7 @@ func main() {
 	service := doggit.NewService(log, dragonfly.New(&conf, log))
 	service.CloseOnProgramEnd()
 
-	// REGISTER LIBRARIES
+	// ATTACH LIBRARIES
 
 	handlers := GetOrderedHandlers(service.AllLibraries())
 
